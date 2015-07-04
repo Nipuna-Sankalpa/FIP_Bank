@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}FiBank{% endblock %}</title>
+        <link href="{{asset('css/bootstrap.min.css')}}" type="text/css" rel="stylesheet">
+        <link href="{{asset('css/font-awesome.min.css')}}" type="text/css" rel="stylesheet">
+        <link href="{{asset('css/base-custom.css')}}" type="text/css" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    {% block navbar %}
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">FiBank</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav" style="font-weight: bold;">
+                        <li><a href="{{path('fip_homepage')}}"><span class="glyphicon glyphicon-home"></span> Home</a></li>                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Bank <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Board of Management</a></li>
+                                <li><a href="#">Values & Beliefs</a></li>                                
+                                <li><a href="#">Branch Locator</a></li>                                
+                                <li role="separator" class="divider"></li>
+                                <li><a href="http://blog.fib-lib.com/">Blog</a></li>                               
+                            </ul>
+                        </li>
+                        <li><a href="{{path('fip_homepage')}}#products">Product & Services</a></li>
+                        <li><a href="{{path('fip_homepage')}}#contacts">Customer Services</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+
+
+                </div><!-- /.navbar-collapse -->
+
+            </div><!-- /.container-fluid -->
+        </nav>
+
+    {% endblock %}
+
+{% block body %}{% endblock %}
+
+{% block footer %}
+
+    <footer style="background-color: #191919;">
+        <div class="container">
+            <div class="row" style="padding: 1em;">
+                <div id="policy" class="col-md-2">
+                    <h4><strong>Terms</strong></h4>
+                    <a href="{{path('fip_privacyStatement')}}" style="color: #636363;">Privacy Policy</a><br />
+                    <a href="{{path('fip_termsConditions')}}" style="color: #636363;">Term & Condition</a><br />
+                    <a href="#" style="color: #636363;">Staff Access</a><br />
+                </div>
+                <div id="social" class="col-md-3" style="border-left: 1px groove #323131;border-right: 1px groove #323131;">
+                    <h4><strong>Connect with us</strong></h4>
+                    <a href="http://www.facebook.com/Fibankliberia" style="color: #636363;"><i class="fa fa-facebook-square"></i> Facebook</a><br />
+                    <a href="http://www.twitter.com/Fibankliberia" style="color: #636363;"><i class="fa fa-twitter-square"></i> Twitter</a><br />
+                    <a href="http://www.youtube.com/Fibankliberia" style="color: #636363;"><i class="fa fa-youtube-square"></i> Youtube</a><br />
+                    <br />
+                    <div class="fb-like" data-href="https://www.facebook.com/Fibankliberia" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div id="details" class="col-md-7">
+                    <h4 ><strong>Contact with us</strong></h4>
+                    <div class="col-md-5" style="color: #636363;">
+                        <p>Head office :</p>
+                        Luke Building,<br />
+                        Near Cumberland Presbyterian Church,<br />
+                        Broad Street,Comm 5.<br />
+                        Accra5th Volta Street Box 4431.<br />
+                        Airport Residential, Accra.
+
+                    </div>
+                    <div class="col-md-4" style="color: #636363;">
+                        Sunyani<br />
+                        Behind Municipal Assembly, Sunyani, Sunyani<br />
+                        Brong-Ahafo, Ghana.
+                    </div>
+                    <div class="col-md-3" style="color: #636363;">
+                        KumasiPrempeh II Street,<br />
+                        Adum-Kumasi
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center" style="color: white;">
+                <img src="{{asset('images/footer-logo.gif')}}"> Copyright © 2015, First International Bank . All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
+{% block javascripts %}{% endblock %}
+
+<script src="{{asset('js/jquery.js')}}"></script>
+<script src="{{asset('js/bootstrap.js')}}"></script>
+</body>
+</html>

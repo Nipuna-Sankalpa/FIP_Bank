@@ -1,0 +1,11 @@
+fip_homepage:
+    path:     /home
+    defaults: { _controller: FIPBundle:Default:index }
+    
+fip_privacyStatement:
+    path: /privacyStatement
+    defaults: {_controller: FIPBundle:Default:privacyStatement }
+    
+fip_termsConditions:
+    path: /terms
+    defaults: {_controller: FIPBundle:Default:termsCondition }
