@@ -1,5 +1,5 @@
 fip_homepage:
-    path:     /home
+    path:     /
     defaults: { _controller: FIPBundle:Default:index }
     
 fip_privacyStatement:
@@ -9,3 +9,16 @@ fip_privacyStatement:
 fip_termsConditions:
     path: /terms
     defaults: {_controller: FIPBundle:Default:termsCondition }
+
+fip_managementBoard:
+    path: /bom
+    defaults: {_controller: FIPBundle:Default:managementBoard }
+
+fip_valuesBeliefs:
+    path: /vb
+    defaults: {_controller: FIPBundle:Default:valuesAndBeliefs }
+
+fip_branchLocator:
+    path: /branchLocator
+    defaults: {_controller: FIPBundle:Default:branchLocator }
+

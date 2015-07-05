@@ -16,4 +16,13 @@ class DefaultController extends Controller
     public function termsConditionAction(){
         return $this->render('FIPBundle:Front:termsConditions.html.twig');
     }
+    public function valuesAndBeliefsAction(){
+        return $this->render('FIPBundle:Front:values_and_beliefs.html.twig');
+    }
+    public function managementBoardAction(){
+        return $this->render('FIPBundle:Front:board_Of_Management.html.twig');
+    }
+    public function branchLocatorAction(){
+        return $this->render('FIPBundle:Front:branchLocator.html.twig');
+    }
 }

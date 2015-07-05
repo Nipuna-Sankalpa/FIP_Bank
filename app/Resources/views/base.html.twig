@@ -32,9 +32,9 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Bank <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Board of Management</a></li>
-                                <li><a href="#">Values & Beliefs</a></li>                                
-                                <li><a href="#">Branch Locator</a></li>                                
+                                <li><a href="{{path('fip_managementBoard')}}">Board of Management</a></li>
+                                <li><a href="{{path('fip_valuesBeliefs')}}">Values & Beliefs</a></li>                                
+                                <li><a href="{{path('fip_branchLocator')}}">Branch Locator</a></li>                                
                                 <li role="separator" class="divider"></li>
                                 <li><a href="http://blog.fib-lib.com/">Blog</a></li>                               
                             </ul>
@@ -56,17 +56,17 @@
 
 {% block footer %}
 
-    <footer style="background-color: #191919;">
+    <footer style="background-image: url({{asset('images/footer.jpg')}})">
         <div class="container">
             <div class="row" style="padding: 1em;">
                 <div id="policy" class="col-md-2">
-                    <h4><strong>Terms</strong></h4>
+                    <h4><strong style="color: white;">Terms</strong></h4>
                     <a href="{{path('fip_privacyStatement')}}" style="color: #636363;">Privacy Policy</a><br />
                     <a href="{{path('fip_termsConditions')}}" style="color: #636363;">Term & Condition</a><br />
                     <a href="#" style="color: #636363;">Staff Access</a><br />
                 </div>
                 <div id="social" class="col-md-3" style="border-left: 1px groove #323131;border-right: 1px groove #323131;">
-                    <h4><strong>Connect with us</strong></h4>
+                    <h4><strong style="color: white;">Connect with us</strong></h4>
                     <a href="http://www.facebook.com/Fibankliberia" style="color: #636363;"><i class="fa fa-facebook-square"></i> Facebook</a><br />
                     <a href="http://www.twitter.com/Fibankliberia" style="color: #636363;"><i class="fa fa-twitter-square"></i> Twitter</a><br />
                     <a href="http://www.youtube.com/Fibankliberia" style="color: #636363;"><i class="fa fa-youtube-square"></i> Youtube</a><br />
@@ -74,7 +74,7 @@
                     <div class="fb-like" data-href="https://www.facebook.com/Fibankliberia" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
                 <div id="details" class="col-md-7">
-                    <h4 ><strong>Contact with us</strong></h4>
+                    <h4 ><strong style="color: white;">Contact with us</strong></h4>
                     <div class="col-md-5" style="color: #636363;">
                         <p>Head office :</p>
                         Luke Building,<br />

@@ -1,0 +1,171 @@
+{% extends 'base.html.twig'%}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/customBranchLocator.css')}}">
+{% endblock %}
+{% block body %}
+    <div class="container" style="margin-top: 5em;">
+        <div class="header text-center" style="font-weight: bold; color: #00CA00;"><h2>Branch & Outlet Locator</h2></div>
+        <br />
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="thumbnail mapModule">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4 class="mapHead">Monrovia</h4>
+                            (Head Office)<br />
+                            <span><strong>Tel:</strong>+231-886552153</span>
+
+                            <div id="address">
+                                Luke Building<br />
+                                Near Cumberland Presbyterian Church<br />
+                                Broad Street<br />
+                                Monrovia
+                            </div>
+                        </div>
+
+                        <div id="map_1" class="col-lg-8" style="margin-top: 1.3em;">                    
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" height="267" width="457" class="thumbnail"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4">
+                <div class="thumbnail mapModule">
+                    <h4 class="mapHead">Buchanan</h4>                
+                    <span><strong>Tel:</strong>+231-886539389</span>
+
+                    <div id="address">
+                        Grand Bassa County<br />
+                        info
+                    </div>
+                    <div id="map_2">
+
+                        <br />
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" class="img-thumbnail"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-4">
+
+                <div class="thumbnail mapModule">
+                    <h4 class="mapHead" >Duala</h4>
+
+                    <span><strong>Tel:</strong>+231-886514694</span>
+
+                    <div id="address">
+                        Bushrod Island<br />
+                        Monrovia
+                    </div>
+                    <div id="map_1">
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" class="img-thumbnail"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="thumbnail mapModule">
+                    <h4 class="mapHead">Ganta</h4>                
+                    <span><strong>Tel:</strong>+231-886530679</span>
+
+                    <div id="address">
+                        Nimba County
+                    </div>
+                    <div id="map_2">
+                        <br />
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" class="img-thumbnail"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="thumbnail mapModule">
+                    <h4 class="mapHead">Paynesville</h4>                
+                    <span><strong>Tel:</strong>+231-886534004</span>
+
+                    <div id="address">
+                        Redlight,<br />Monrovia
+                    </div>
+                    <div id="map_3">
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" class="img-thumbnail"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="thumbnail mapModule">
+                    <h4 class="mapHead">Sinkor</h4>
+
+                    <span><strong>Tel:</strong>+231-88607520</span>
+
+                    <div id="address">
+                        15th Street,<br />
+                        Sinkor,<br />
+                        Monrovia
+                    </div>
+                    <div id="map_1">
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" class="img-thumbnail"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="thumbnail mapModule">
+                    <h4 class="mapHead">Sinoe</h4>                
+                    <span><strong>Tel:</strong>+231-886534648</span>
+
+                    <div id="address">
+                        Greenville,<br />
+                        Sinoe County.
+                    </div>
+                    <div id="map_2">
+                        <br />
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" class="img-thumbnail"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="thumbnail mapModule">
+                    <h4 class="mapHead">Buchanan</h4>                
+                    <span><strong>Tel:</strong>+231-886558428</span>
+
+                    <div id="address">
+                        Bushrod Island<br />
+                        Monrovia
+                    </div>
+                    <div id="map_3">
+
+                        <br />
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7866.698261635076!2d76.36893404541627!3d9.651179823938902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x93fa22a41aac4d75!2sKanivu+Charitable+Trust!5e0!3m2!1sen!2sin!4v1433709664971" frameborder="0" class="img-thumbnail"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" style="padding-bottom: 1em;">
+            <div class="mapModule" style="margin-bottom: 1em;">
+                <h4 class="mapHead text-center">Money Gram Outlet</h4>
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-1"><li>Duport Road</li></div>
+                    <div class="col-lg-2"><li>Gardnersville</li></div>
+                    <div class="col-lg-2"><li>Jamaica Road</li></div>
+                    <div class="col-lg-2"><li>Logan Town</li></div>
+                    <div class="col-lg-2"><li>Wroto Town</li></div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

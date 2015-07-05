@@ -1,6 +1,6 @@
 fip:
     resource: "@FIPBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /home
 
 app:
     resource: "@AppBundle/Controller/"
