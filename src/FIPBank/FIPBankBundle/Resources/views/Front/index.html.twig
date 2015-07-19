@@ -1,0 +1,185 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+    {# ------------fb like button-------------- #}
+
+    <div id="fb-root">
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </div>
+    {# ------------fb like button-------------- #}
+
+
+    {# ---------------------------carousel starts--------------------------------------- #}
+    <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- Indicators -->
+
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="background-color: #000;">
+                <img src="{{asset('images/carousel/1.jpg')}}" alt="1" style="opacity: 0.6">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item" style="background-color: #000;">
+                <img src="{{asset('images/carousel/2.jpg')}}" alt="2" style="opacity: 0.6">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('images/carousel/3.jpg')}}" alt="3">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    {# ---------------------------carousel Ends--------------------------------------- #}
+
+    <div style="background-color: #19181A;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-lg-offset-1 col-md-offset-1 col-sm-offset-1" style="padding: 2em;">
+                    <img src="{{asset('images/logo_symbol.jpg')}}" alt="logo" class="img-thumbnail img-responsive">
+                </div>
+                <br />
+                <div class="col-lg-8 col-md-8 col-sm-8" >
+                    <h2 class="header" style="color: white;font-weight: bold;">Vision</h2>                    
+                    <i class="fa fa-quote-left fa-2x" style="color: #4cae4c;"></i>
+                    <p class="text-center" style="color: #636363">
+                        To be the preferred Bank of choice to target customers, 
+                        by offering innovative products and excellent customer services offered through a team of highly motivated staff backed with state-of-the-art technology, 
+                        in order to achieve optimal shareholder returns whilst promoting good corporate citizenship and industry best practices.
+                    </p>
+                    <i class="fa fa-quote-right fa-2x pull-right" style="color: #4cae4c;"></i>
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="header-logo" style="color: white;font-weight: bold;">About Bank</h2>
+
+                <h4 style="color: #4cae4c;">First International Bank (Liberia) Limited</h4>
+                <p style="color: #636363;" class="text-justify">
+                    Date of Establishment/License: April 2005 <br />
+
+                    FiBank Liberia is duly licensed by the Central Bank of Liberia as a Commercial Bank, 
+                    and is a member of the FiBank Group which has banking and insurance subsidiaries in four other African Countries namely: The Gambia, Sierra Leone, Guinea, and the Democratic Republic of Congo.
+                    FiBank is a leading financial services provider in Liberia. The Company’s Head Office is the 4-storey Luke Building, located on Broad Street, Monrovia, Liberia. 
+                    FiBank Liberia has expanded its operations to now include eight (8) branches and five (5) MoneyGram and Western Union Retail Outlets in the capital suburbs and in the provinces. 
+                    In recognition of the booming banking opportunities in Liberia, 
+                    FiBank Liberia recently sought and obtained from the AfricanExport-Import Bank a USD 10 Million Facility on non recourse basis and a USD 3Million Trade Finance Facility to stimulate import-export activities throughout Liberia.
+                </p>
+                <span class="pull-right"><a href="#" style="color: #4cae4c;">Read more <i class="fa fa-angle-double-right"></i></a></span>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="products" class="container" style="padding-bottom: 1em;">
+        <h1 class="header" style="font-weight: bold;" >Product & Services</h1>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <img src="{{asset('images/product_and_services/pro1.jpg')}}" alt="products" class="img-circle img-responsive" style="box-shadow: 0px 10px 50px 0px #636363">
+
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <p class="text-justify">
+                    FIBank is a leading financial services provider in Liberia.
+                    Accounts denominated in either Liberian or US dollars can be maintained with the bank by individuals,
+                    organizations or corporate bodies.
+                    Our suite of innovative and competitive financial products and services include
+                </p>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h4 class="header" style="color: #00CA00;font-weight: bold;">Deposit Products & Services</h4>
+                        <li>Current (Checking) Accounts</li>
+                        <li>Savings Account</li>
+                        <li>Trust accounts (for minors, dependants, trustees etc)</li>
+                        <li>Time Deposits</li>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h4 class="header" style="color: #00CA00;font-weight: bold;">Credit Products & Services</h4>
+                        <li>Short term Overdrafts and Advances</li>
+                        <li>Invoice discounting and Debt factoring</li>
+                        <li>Bonds, Indemnities and Guarantees</li>
+                        <li>Asset backed consumer lending</li>
+                        <li>LPO and Contract financing</li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h4 class="header" style="color: #00CA00;font-weight: bold;">Funds Transfer Products & Services</h4>
+                        <li>Managers’ Cheques</li>
+                        <li>Foreign Cheques/ Drafts</li>
+                        <li>Inward and Outward Wire transfers –via SWIFT</li>
+                        <li>MoneyGram International Cash Transfers</li>
+                        <li>Western Union International Cash Transfers</li>
+                        <li>Internet Banking and Notification Services</li>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h4 class="header" style="color: #00CA00;font-weight: bold;">Trade Finance Products & Services</h4>
+                        <li>Letters of Credit</li>
+                        <li>Documentary Collection</li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="contacts" style="background-color:#4cae4c;color: white;padding-bottom: 1em;">
+        <div class="container">
+            <h2 class="header" style="font-weight: bold;">Customer Services</h2>
+            <p>
+                FiBank Liberia is passionate about customer services and is offering 
+                a host of channels for customers to access services with the bank.
+            </p>
+
+            <div class="col-sm-6"  style="border-right:1px solid white;">
+                <h3 class="header">Customer Contact Channels <i class="fa fa-phone-square fa-2x"></i></h3>
+                <label class="control-label">Call Us :</label>
+                <span>+231-886552153</span><br />
+                <label class="control-label">Write by Post / Courier :</label>
+                FiBank Liberia,
+                Luke Building,
+                Broad Street, Monrovia
+                Liberia.<br />
+                <label class="control-label">Email / Online Helpdesk :</label>
+                <span><a href="#" style="color: white;">Click Here to open or Follow-up Online Helpdesk ticket</a></span>
+            </div>
+
+            <div class="col-sm-6">
+                <h3 class="header">Download Channel <i class="fa fa-download fa-2x"></i></h3>
+                <li><a href="{{asset('downloads/Account_Opening_Form_Individual.pdf')}}" style="color: white;" target="_blank">Download Account Opening Form (Individual)</a></li>
+                <li><a href="{{asset('downloads/Account_Opening_Form_Corporate.pdf')}}" style="color: white;" target="_blank">Download Account Opening Form (Corporate)</a></li>
+                <li><a href="{{asset('downloads/Account_Opening_Form_Society_Club.pdf')}}" style="color: white;" target="_blank">Download Account Opening Form (Association/Club/Society)</a></li>
+                <li><a href="{{asset('downloads/Instant_Statement_Request_Form.pdf')}}" style="color: white;" target="_blank">Download Instant Statement Request Form</a></li>
+                <li><a href="{{asset('downloads/Account_Mandate_Speciment_Card.pdf')}}" style="color: white;" target="_blank">Download Mandate / Specimen Card</a></li>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'FIPBankBundle:Default:index.html.twig'%}
+
+{% block title %}
+    <title>History</title>
+{% endblock %}
+
+{% block brand %}
+    <a class="navbar-brand" href="#">FiBank Customer Portal</a>
+{% endblock %}
+
+{% block item %}
+    <li>
+        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Transactions</a>
+    </li>
+
+    <li>
+        <a href="#"><i class="fa fa-table fa-fw"></i> Transaction History</a>
+    </li>
+    <li>
+        <a href="#"><i class="fa fa-edit fa-fw"></i> Settings</a>
+    </li>     
+{% endblock %}
+
+{% block header %}
+    <h2 class="page-header">Transactions History</h2>
+{% endblock %}
+
+{% block pageContent %}
+
+    <div id="history">
+        <div id="transactionTable" class="row">
+            <div>
+                <table class="table table-hover">
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Date</th>
+                        <th>Transferred to</th>
+                        <th>Verified date</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2013-01-01</td>
+                        <td>7423714273418</td>
+                        <td>2013-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2013-01-01</td>
+                        <td>7423714273418</td>
+                        <td>2013-01-02</td>
+                    </tr>                    
+                </table>
+            </div>
+            <div>Load More <i class="fa fa-arrow-down"></i></div>            
+        </div>
+        <div id="transactionDetail" class="row well">
+            <div>
+                <h4 class="header">Detailed View</h4>
+                <div class="text-left">Transferred to : 23648263428</div>
+                <p class="text-justify">
+                    The transaction has been performed in "DATE" at "TIME" local time by yourself and the verification done by
+                    "USER ID" on "verified Date".
+                </p>
+                <div class="text-left">
+                    Description :
+                </div>
+                <p>
+                    if exists then display
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

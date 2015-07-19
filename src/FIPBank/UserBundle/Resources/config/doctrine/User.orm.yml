@@ -1,0 +1,10 @@
+## YAML Template.
+
+FIPBank\UserBundle\Entity\User:
+    type:  entity
+    table: user_accounts
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO

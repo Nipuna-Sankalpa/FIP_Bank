@@ -1,0 +1,31 @@
+fip_homepage:
+    path:     /home
+    defaults: { _controller: FIPBankBundle:Default:index }
+    
+fip_privacyStatement:
+    path: /privacyStatement
+    defaults: {_controller: FIPBankBundle:Default:privacyStatement }
+    
+fip_termsConditions:
+    path: /terms
+    defaults: {_controller: FIPBankBundle:Default:termsCondition }
+
+fip_managementBoard:
+    path: /bom
+    defaults: {_controller: FIPBankBundle:Default:managementBoard }
+
+fip_valuesBeliefs:
+    path: /vb
+    defaults: {_controller: FIPBankBundle:Default:valuesAndBeliefs }
+
+fip_branchLocator:
+    path: /branchLocator
+    defaults: {_controller: FIPBankBundle:Default:branchLocator }
+
+custom:
+    path: /user
+    defaults: {_controller: FIPBankBundle:Default:userPortal }
+
+customReview:
+    path: /userReview
+    defaults: {_controller: FIPBankBundle:Customer:viewBalance }
