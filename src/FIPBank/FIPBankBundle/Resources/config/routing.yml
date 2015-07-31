@@ -1,7 +1,3 @@
-fip_homepage:
-    path:     /home
-    defaults: { _controller: FIPBankBundle:Default:index }
-    
 fip_privacyStatement:
     path: /privacyStatement
     defaults: {_controller: FIPBankBundle:Default:privacyStatement }
@@ -21,11 +17,58 @@ fip_valuesBeliefs:
 fip_branchLocator:
     path: /branchLocator
     defaults: {_controller: FIPBankBundle:Default:branchLocator }
+    
+fip_RoleSelector:
+    path: /ps
+    defaults: {_controller: FIPBankBundle:Default:roleSelector }
+#------------------------------------------------------------#
 
-custom:
-    path: /user
-    defaults: {_controller: FIPBankBundle:Default:userPortal }
 
-customReview:
-    path: /userReview
-    defaults: {_controller: FIPBankBundle:Customer:viewBalance }
+#------------------------------------------------------------#
+
+User:
+    path: fb/user
+    defaults: {_controller: FIPBankBundle:Customer:index }
+    
+superAdmin:
+    path: /superAdmin/
+    defaults: {_controller: FIPBankBundle:SuperAdmin:index }
+    
+Admin:    
+    path: /admin/
+    defaults: {_controller: FIPBankBundle:Admin:index }
+    
+#------------------------------------------------------------#
+CreateAdmin:    
+    path: /superAdmin/CreateAdmin
+    defaults: {_controller: FIPBankBundle:SuperAdmin:createAdmin }
+CreateAdminConfirm:    
+    path: /admin/CreateAdmin
+    defaults: {_controller: FIPBankBundle:SuperAdmin:createAdminConfirm }
+    
+ViewHistory:    
+    path: fb/history/{userId}
+    defaults: {_controller: FIPBankBundle:Customer:viewHistory }
+
+passwordChangedSuccessfully:    
+    path: fb/passwordChanged/
+    defaults: {_controller: FIPBankBundle:CommonAction:profileSettingsSuccess }
+    
+#------------------------------------------------------------#
+
+
+
+
+    
+#-------------------------Profile Settings-----------------------------------#
+    
+customerSettings:
+    path: /customer/Settings
+    defaults: {_controller: FIPBankBundle:Customer:settings }
+    
+
+profileSettings:
+    path: /profile/Settings
+    defaults: {_controller: FIPBankBundle:CommonAction:profileSettings }
+    
+#------------------------------------------------------------#

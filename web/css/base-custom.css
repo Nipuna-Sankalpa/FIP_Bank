@@ -60,3 +60,8 @@ and open the template in the editor.
 .carousel-fade .carousel-control {
     z-index: 5;
 }
+
+@font-face{
+    font-family: TitilliumWeb-SemiBold;
+    src: url(../fonts/TitilliumWeb-SemiBold.ttf);
+}

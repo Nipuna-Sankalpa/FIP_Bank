@@ -8,28 +8,15 @@
 {% endblock %}
 
 {% block item %}    
-    <li>
-        <a href="#"><i class="fa fa-wrench fa-fw"></i> Accounts<span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level in">
-            <li >
-                <a href="#">Customer Accounts</a>
-            </li>
-            {% if is_granted('ROLE_SUPER_ADMIN') %}
-                <li >
-                    <a href="#">Admin Accounts</a>
-                </li>
-            {% endif %}            
-        </ul>        
-    </li>
-    <li>
-        <a href="#"><i class="fa fa-wrench fa-fw"></i> Settings<span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
+          
             <li>
-                <a href="#">Profile Settings</a>
-            </li>
-                       
-        </ul> 
-    </li>
+                <a href="{{path('User')}}"><i class="fa fa-table fa-fw"></i> Transaction History</a>
+            </li>                   
+  
+            <li>
+                <a href="#"><i class="fa fa-edit fa-fw"></i> Profile Settings</a>
+            </li>        
+    
 {% endblock %}
 
 {% block header %}
@@ -46,17 +33,17 @@
                 {{form_label(form.current_password,{},{'label_attr':{'class':'control-label'}})}}
                 {{form_widget(form.current_password,{'attr':{'class':'form-control','placeholder':'Enter current password'}})}}                    
             </div>
-         
+
             <div class="form-group">                
                 {{form_label(form.new.first,{},{'label_attr':{'class':'control-label'}})}}
                 {{form_widget(form.new.first,{'attr':{'class':'form-control','placeholder':'Enter new password'}})}}                    
             </div>
+            
             <div class="form-group">                
                 {{form_label(form.new.second,{},{'label_attr':{'class':'control-label'}})}}
                 {{form_widget(form.new.second,{'attr':{'class':'form-control','placeholder':'Re-type new password'}})}}                    
-
             </div >
-            
+
             <div >
                 <button class="btn btn-success pull-right" type="submit">Change password <i class="fa fa-arrow-right"></i></button>
             </div>
@@ -64,6 +51,6 @@
 
         </div>
     </div>
-        
-        
+
+
 {% endblock %}{# empty Twig template #}

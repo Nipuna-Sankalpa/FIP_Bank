@@ -1,4 +1,6 @@
 services:
-#    user.example:
-#        class: FIPBank\UserBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    FIP.registration.form.type:
+            class: FIPBank\UserBundle\Form\Type\RegistrationFormType
+            arguments: [%fos_user.model.user.class%]
+            tags:
+                - { name: form.type, alias: FIP_REG_FORM }

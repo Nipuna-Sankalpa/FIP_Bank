@@ -7,6 +7,7 @@
  */
 
 namespace FIPBank\FIPBankBundle\Controller;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -16,8 +17,29 @@ use Symfony\Component\HttpFoundation\Request;
  * @author Flash
  */
 class CommonActionController extends Controller {
+
+    public function AccountManageAction(Request $request ) {
+        
+
+        return $this->render('FIPBankBundle:CommonProfile:settings.html.twig', array(
+                    
+        ));
+    }
+
     
-    public function createUserAction(){}
-    public function profileSettingsAction(){}
-    
+    public function profileSettingsAction() {
+        $form = $this->container->get('fos_user.change_password.form');
+
+        return $this->render('FIPBankBundle:CommonProfile:settings.html.twig', array(
+                    'form' => $form->createView()
+        ));
+    }
+    public function profileSettingsSuccessAction() {
+        $form = $this->container->get('fos_user.change_password.form');
+
+        return $this->render('FIPBankBundle:CommonProfile:settingsSuccessful.html.twig', array(
+                    'form' => $form->createView()
+        ));
+    }
+
 }

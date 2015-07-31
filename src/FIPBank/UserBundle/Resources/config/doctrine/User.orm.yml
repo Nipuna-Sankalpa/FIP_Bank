@@ -8,3 +8,8 @@ FIPBank\UserBundle\Entity\User:
             type: integer
             generator:
                 strategy: AUTO
+                
+    fields:
+        accountNumber:
+            type: integer
+            length: 100

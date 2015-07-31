@@ -1,5 +1,9 @@
 fip_bank:
     resource: "@FIPBankBundle/Resources/config/routing.yml"
+    prefix:   /FIP
+    
+fip_bank_user_bundle:
+    resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:
@@ -20,3 +24,4 @@ fos_user_register:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profileSettings
+    

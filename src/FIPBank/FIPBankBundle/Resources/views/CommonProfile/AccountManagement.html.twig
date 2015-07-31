@@ -1,1 +1,41 @@
 {% extends 'FIPBankBundle:Default:index.html.twig'%}
+{% block title %}
+    <title>Customer Account Manage</title>
+{% endblock %}
+
+{% block brand %}
+    <a class="navbar-brand" href="#" style="font-family: 'Roboto Slab', serif;">Customer Account Reset</a>
+{% endblock %}
+
+{% block item %}    
+
+    <li>
+        <a href="#">Profile Settings</a>
+    </li>
+    <li>
+        <a href="#">Customer Profile Settings</a>
+    </li>  
+{% endblock %}
+
+{% block header %}
+    <h2 class="page-header">Admin Accounts</h2>
+{% endblock %}
+
+{% block pageContent %}
+
+    <div id="adminAccount">
+        <div id="register" class="row well">
+
+            <form action="#" method="POST">
+                <div class="form-group">                
+                    <label class="control-label">Email:</label>
+                    <input type="email" name="email" placeholder="Enter Customer Email"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success pull-right" type="submit">Reset Password <i class="fa fa-arrow-right"></i></button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

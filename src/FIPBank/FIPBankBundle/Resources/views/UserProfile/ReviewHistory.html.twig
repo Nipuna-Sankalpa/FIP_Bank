@@ -5,19 +5,16 @@
 {% endblock %}
 
 {% block brand %}
-    <a class="navbar-brand" href="#">FiBank Customer Portal</a>
+    <a class="navbar-brand" href="#" style="font-family: 'Roboto Slab', serif;">FiBank Customer Portal</a>
 {% endblock %}
 
 {% block item %}
-    <li>
-        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Transactions</a>
-    </li>
 
     <li>
         <a href="#"><i class="fa fa-table fa-fw"></i> Transaction History</a>
     </li>
     <li>
-        <a href="#"><i class="fa fa-edit fa-fw"></i> Settings</a>
+        <a href="{{path('customerSettings')}}"><i class="fa fa-edit fa-fw"></i> Settings</a>
     </li>     
 {% endblock %}
 
@@ -26,6 +23,34 @@
 {% endblock %}
 
 {% block pageContent %}
+    <div id="accountDetails">
+        <div>
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6">
+                                <h3><strong>Account Number :</strong></h3>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <h3><strong>{{bankAccount.accountNumber}}</strong></h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-6">
+                                <h3><strong>Account Balance :</strong></h3>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <h3><strong>₦ {{bankAccount.accountBalance}}</strong></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <div id="history">
         <div id="transactionTable" class="row">
@@ -33,42 +58,34 @@
                 <table class="table table-hover">
                     <tr>
                         <th>Transaction ID</th>
-                        <th>Date</th>
+                        <th>UserID</th>
                         <th>Transferred to</th>
                         <th>Verified date</th>
+                        <th>Amount Transferred (₦)</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2013-01-01</td>
-                        <td>7423714273418</td>
-                        <td>2013-01-02</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2013-01-01</td>
-                        <td>7423714273418</td>
-                        <td>2013-01-02</td>
-                    </tr>                    
+                    {% for histo,elements in history %}
+                        <tr id="{{loop.index}}">
+                            {% for element in elements%}
+                                <td>{{element}}</td>                        
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+
                 </table>
             </div>
-            <div>Load More <i class="fa fa-arrow-down"></i></div>            
+
         </div>
-        <div id="transactionDetail" class="row well">
-            <div>
-                <h4 class="header">Detailed View</h4>
-                <div class="text-left">Transferred to : 23648263428</div>
-                <p class="text-justify">
-                    The transaction has been performed in "DATE" at "TIME" local time by yourself and the verification done by
-                    "USER ID" on "verified Date".
-                </p>
-                <div class="text-left">
-                    Description :
-                </div>
-                <p>
-                    if exists then display
-                </p>
-            </div>
-        </div>
+
     </div>
+
+
+{% endblock %}
+
+{% block js %}
+    <script>
+
+    </script>
+
+
 
 {% endblock %}
