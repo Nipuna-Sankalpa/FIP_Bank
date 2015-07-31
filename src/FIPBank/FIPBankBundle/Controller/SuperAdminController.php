@@ -43,12 +43,12 @@ class SuperAdminController extends Controller {
         ));
     }
 
-    public function createAdminConfirmAction($userId) {
+    public function createAdminConfirmAction() {
         $registrationForm = $this->container->get('fos_user.registration.form');
         
         return $this->render('FIPBankBundle:SuperAdminProfile:SystemManagementConfirm.html.twig', array(
                     'registrationForm' => $registrationForm->createView(),                    
-                    'userId' => $userId,
+                    
         ));
     }
 

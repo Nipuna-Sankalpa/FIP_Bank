@@ -14,9 +14,11 @@
             <li >
                 <a href="{{path('superAdmin')}}">Customer Accounts</a>
             </li>
-            <li>
-                <a href="{{path('CreateAdmin')}}">Admin Accounts</a>
-            </li>            
+            {% if is_granted('ROLE_SUPER_ADMIN')%}
+                <li>
+                    <a href="{{path('CreateAdmin')}}">Admin Accounts</a>
+                </li>   
+            {% endif %}         
         </ul>        
     </li>
     <li>
@@ -60,18 +62,26 @@
                 {{form_label(registrationForm.plainPassword.second,{},{'label_attr':{'class':'control-label'}})}}
                 {{form_widget(registrationForm.plainPassword.second,{'attr':{'class':'form-control','placeholder':'Re-type password'}})}}                    
 
-            </div >
-            <div class="form-group">                
-                {{form_label(registrationForm.role,{},{'label_attr':{'class':'control-label'}})}}                                
-                {{form_widget(registrationForm.role,{'attr':{'class':'form-control','placeholder':'Select Role'}})}}                  
-            </div>
+            </div >           
+
+            {% if is_granted('ROLE_SUPER_ADMIN')%}
+                <div class="form-group">                
+                    {{form_label(registrationForm.role,{},{'label_attr':{'class':'control-label'}})}}                                
+                    {{form_widget(registrationForm.role,{'attr':{'class':'form-control','placeholder':'Select Role'}})}}                  
+                </div>
+            {% else %}
+                <div class="form-group" style="display: none;">                
+                    {{form_label(registrationForm.role,{},{'label_attr':{'class':'control-label'}})}}                                
+                    {{form_widget(registrationForm.role,{'attr':{'class':'form-control','value':'ROLE_USER','placeholder':'Select Role'}})}}                  
+                </div>
+            {% endif %} 
 
             <div >
                 <button class="btn btn-success pull-right" type="submit">Register <i class="fa fa-arrow-right"></i></button>
             </div>
             {{form_end(registrationForm)}}
         </div>
-        
+
     </div>
 
 
