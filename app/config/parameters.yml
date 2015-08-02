@@ -1,9 +1,9 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_host: 127.0.0.1
-    database_port: null
+    database_host: db4free.net
+    database_port: 3306
     database_name: fibank
-    database_user: root
+    database_user: nipuna
     database_password: '0713899213'
     mailer_transport: smtp
     mailer_host: 127.0.0.1
