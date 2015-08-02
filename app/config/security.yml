@@ -7,10 +7,10 @@ security:
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
     providers:
-    in_memory:
-        memory:
-            users:
-                admin: { password: 123, roles: ROLE_ADMIN }
+        in_memory:
+            memory:
+                users:
+                    admin: { password: 123, roles: ROLE_ADMIN }
 
     firewalls:
         main:
