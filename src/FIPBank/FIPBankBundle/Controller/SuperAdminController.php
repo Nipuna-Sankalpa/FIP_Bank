@@ -37,7 +37,7 @@ class SuperAdminController extends Controller {
     public function createAdminAction() {
         $registrationForm = $this->container->get('fos_user.registration.form');
 
-        return $this->render('FIPBankBundle:SuperAdminProfile:SystemManagement.html.twig', array(
+        return $this->render('FIPBankBundle:SuperAdminProfile:AdminAccount.html.twig', array(
                     'registrationForm' => $registrationForm->createView(),
                     'bankForm' => null,
         ));

@@ -95,7 +95,7 @@ class DefaultController extends Controller {
 
         $user = $this->container->get('security.context')->getToken()->getUser();
         $role = $user->getRoles();
-        $userId = 4;
+        $userId = $user->getId();
 
         if ($role[0] == "ROLE_USER") {
             return $this->redirect($this->generateUrl("ViewHistory", array(

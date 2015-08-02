@@ -10,7 +10,7 @@
 {% block item %}    
           
             <li>
-                <a href="{{path('User')}}"><i class="fa fa-table fa-fw"></i> Transaction History</a>
+                <a href="{{path('ViewHistory',{'userId':app.user.id})}}"><i class="fa fa-table fa-fw"></i> Transaction History</a>
             </li>                   
   
             <li>

@@ -26,6 +26,6 @@ security:
 
     access_control:
         
-        - { path: ^/FIP/fb, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/FIP/admin/, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/FIP/superAdmin/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/FIP/fb, role: IS_AUTHENTICATED_FULLY }
+        - { path: ^/FIP/admin/, role: ROLE_ADMIN }
+        - { path: ^/FIP/superAdmin/, role: ROLE_SUPER_ADMIN }

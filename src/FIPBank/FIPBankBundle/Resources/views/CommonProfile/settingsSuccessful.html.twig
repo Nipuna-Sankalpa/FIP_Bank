@@ -12,11 +12,11 @@
         <a href="#"><i class="fa fa-wrench fa-fw"></i> Accounts<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level in">
             <li >
-                <a href="#">Customer Accounts</a>
+                <a href="{{path('Admin')}}">Customer Accounts</a>
             </li>
             {% if is_granted('ROLE_SUPER_ADMIN') %}
                 <li >
-                    <a href="#">Admin Accounts</a>
+                    <a href="{{path('CreateAdmin')}}">Admin Accounts</a>
                 </li>
             {% endif %}            
         </ul>        
